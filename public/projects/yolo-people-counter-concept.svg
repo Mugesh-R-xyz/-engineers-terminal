@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="yoloBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F2438"/>
+      <stop offset="100%" stop-color="#00182E"/>
+    </linearGradient>
+    <filter id="yoloShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="800" height="450" fill="url(#yoloBg)" rx="12"/>
+  <rect width="798" height="448" x="1" y="1" fill="none" stroke="#D9C8A3" stroke-width="2" rx="12"/>
+
+  <!-- Concept Disclaimer Banner -->
+  <rect x="0" y="0" width="800" height="28" fill="#003366" rx="12 12 0 0"/>
+  <text x="400" y="18" fill="#F5DEB3" font-family="'Manrope', system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+    ILLUSTRATIVE VISUALIZATION — WORKING PROTOTYPE
+  </text>
+
+  <!-- Streamlit / HUD App Top Bar -->
+  <rect x="20" y="40" width="760" height="42" fill="#183654" stroke="#2B4D70" stroke-width="1" rx="6"/>
+  <circle cx="36" cy="61" r="5" fill="#A73E18"/>
+  <text x="50" y="66" fill="#F5DEB3" font-family="'Manrope', system-ui, sans-serif" font-size="13" font-weight="700">
+    YOLO People Counter
+  </text>
+  <text x="210" y="65" fill="#8EAECB" font-family="'IBM Plex Mono', monospace" font-size="11">
+    STREAM: Phone Camera (HTTP) | MODEL: YOLO11n | GPU: Local | FPS: 28.4
+  </text>
+  <rect x="680" y="49" width="88" height="24" rx="4" fill="#003366" stroke="#487B9F"/>
+  <circle cx="692" cy="61" r="3.5" fill="#44D7B6"/>
+  <text x="702" y="65" fill="#E6F2F8" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600">
+    RECORDING
+  </text>
+
+  <!-- Camera Viewport / Room Outline -->
+  <rect x="20" y="92" width="530" height="300" fill="#091826" stroke="#20405E" stroke-width="1.5" rx="6" filter="url(#yoloShadow)"/>
+
+  <!-- Perspective grid / hallway cues -->
+  <line x1="20" y1="392" x2="160" y2="240" stroke="#17354D" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="550" y1="392" x2="410" y2="240" stroke="#17354D" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="160" y1="240" x2="410" y2="240" stroke="#17354D" stroke-width="1.5"/>
+  <line x1="160" y1="130" x2="160" y2="240" stroke="#17354D" stroke-width="1.5"/>
+  <line x1="410" y1="130" x2="410" y2="240" stroke="#17354D" stroke-width="1.5"/>
+
+  <!-- Virtual Tripwire / Count Line -->
+  <line x1="40" y1="280" x2="530" y2="280" stroke="#F5DEB3" stroke-width="2" stroke-dasharray="8 6" stroke-opacity="0.8"/>
+  <rect x="210" y="271" width="150" height="18" rx="3" fill="#003366" stroke="#D9C8A3"/>
+  <text x="285" y="284" fill="#F5DEB3" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" text-anchor="middle">
+    TRIPWIRE COUNT LINE
+  </text>
+
+  <!-- Detection Box 1: Person IN -->
+  <!-- Target Box -->
+  <rect x="100" y="150" width="130" height="210" fill="#44D7B6" fill-opacity="0.08" stroke="#44D7B6" stroke-width="2" rx="4"/>
+  <!-- Corner ticks -->
+  <path d="M100 165 L100 150 L115 150" fill="none" stroke="#44D7B6" stroke-width="3"/>
+  <path d="M215 150 L230 150 L230 165" fill="none" stroke="#44D7B6" stroke-width="3"/>
+  <path d="M100 345 L100 360 L115 360" fill="none" stroke="#44D7B6" stroke-width="3"/>
+  <path d="M215 360 L230 360 L230 345" fill="none" stroke="#44D7B6" stroke-width="3"/>
+  <!-- Label tag -->
+  <rect x="100" y="128" width="130" height="22" rx="3" fill="#44D7B6"/>
+  <text x="165" y="143" fill="#00241B" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">
+    person 0.89 [IN ↓]
+  </text>
+  <!-- Stylized Person 1 Silhouette -->
+  <circle cx="165" cy="185" r="18" fill="#44D7B6" fill-opacity="0.5"/>
+  <path d="M142 225 Q165 210 188 225 L192 295 L175 295 L175 345 L155 345 L155 295 L138 295 Z" fill="#44D7B6" fill-opacity="0.3"/>
+  <path d="M165 310 L165 340 M160 335 L165 340 L170 335" fill="none" stroke="#44D7B6" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Detection Box 2: Person OUT -->
+  <!-- Target Box -->
+  <rect x="330" y="170" width="130" height="200" fill="#E67E22" fill-opacity="0.08" stroke="#E67E22" stroke-width="2" rx="4"/>
+  <!-- Corner ticks -->
+  <path d="M330 185 L330 170 L345 170" fill="none" stroke="#E67E22" stroke-width="3"/>
+  <path d="M445 170 L460 170 L460 185" fill="none" stroke="#E67E22" stroke-width="3"/>
+  <path d="M330 355 L330 370 L345 370" fill="none" stroke="#E67E22" stroke-width="3"/>
+  <path d="M445 370 L460 370 L460 355" fill="none" stroke="#E67E22" stroke-width="3"/>
+  <!-- Label tag -->
+  <rect x="330" y="148" width="130" height="22" rx="3" fill="#E67E22"/>
+  <text x="395" y="163" fill="#FFFFFF" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">
+    person 0.93 [OUT ↑]
+  </text>
+  <!-- Stylized Person 2 Silhouette -->
+  <circle cx="395" cy="200" r="17" fill="#E67E22" fill-opacity="0.5"/>
+  <path d="M374 238 Q395 224 416 238 L420 305 L405 305 L405 355 L385 355 L385 305 L370 305 Z" fill="#E67E22" fill-opacity="0.3"/>
+  <path d="M395 335 L395 305 M390 310 L395 305 L400 310" fill="none" stroke="#E67E22" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right Side Dashboard Metrics Panel -->
+  <rect x="565" y="92" width="215" height="300" fill="#132B44" stroke="#2B4D70" stroke-width="1" rx="6"/>
+  
+  <text x="580" y="118" fill="#F5DEB3" font-family="'Manrope', system-ui, sans-serif" font-size="13" font-weight="700">
+    LIVE METRICS
+  </text>
+  <text x="580" y="133" fill="#8EAECB" font-family="'Inter', system-ui, sans-serif" font-size="11">
+    Calculated per crossing event
+  </text>
+
+  <!-- Metric 1: IN -->
+  <rect x="580" y="145" width="185" height="52" fill="#0C1D2E" stroke="#23425F" stroke-width="1" rx="5"/>
+  <text x="595" y="165" fill="#8EAECB" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">
+    ENTERED (IN)
+  </text>
+  <text x="595" y="188" fill="#44D7B6" font-family="'IBM Plex Mono', monospace" font-size="20" font-weight="700">
+    14
+  </text>
+
+  <!-- Metric 2: OUT -->
+  <rect x="580" y="205" width="185" height="52" fill="#0C1D2E" stroke="#23425F" stroke-width="1" rx="5"/>
+  <text x="595" y="225" fill="#8EAECB" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">
+    EXITED (OUT)
+  </text>
+  <text x="595" y="248" fill="#E67E22" font-family="'IBM Plex Mono', monospace" font-size="20" font-weight="700">
+    09
+  </text>
+
+  <!-- Metric 3: Current Inside -->
+  <rect x="580" y="265" width="185" height="54" fill="#0C1D2E" stroke="#23425F" stroke-width="1" rx="5"/>
+  <text x="595" y="285" fill="#8EAECB" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">
+    EST. OCCUPANCY
+  </text>
+  <text x="595" y="310" fill="#F5DEB3" font-family="'IBM Plex Mono', monospace" font-size="22" font-weight="800">
+    05
+  </text>
+
+  <!-- Storage notice -->
+  <rect x="580" y="327" width="185" height="52" fill="#091826" stroke="#1D364E" stroke-width="1" rx="4"/>
+  <text x="590" y="344" fill="#8EAECB" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600">
+    STORAGE: events.csv
+  </text>
+  <text x="590" y="360" fill="#5E7F9E" font-family="'IBM Plex Mono', monospace" font-size="9">
+    timestamp, track_id, dir
+  </text>
+  <text x="590" y="372" fill="#5E7F9E" font-family="'IBM Plex Mono', monospace" font-size="9">
+    11:27:44, ID#14, IN
+  </text>
+
+  <!-- Bottom Console Status Ribbon -->
+  <rect x="20" y="402" width="760" height="34" fill="#0C1D2E" stroke="#20405E" stroke-width="1" rx="5"/>
+  <text x="32" y="423" fill="#D9C8A3" font-family="'IBM Plex Mono', monospace" font-size="10">
+    [LOG]: Video stream connected (RTSP/HTTP). YOLO11n tracking active. Writing crossing events to local CSV.
+  </text>
+</svg>
